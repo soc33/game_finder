@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Survey</title>
+    <!-- Linking bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Linking bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Linking jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Linking my javascript -->
+    <script src="../app/data/games.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">Find a game!</h1>
+            <hr>
+            <h4 class="text-center">Answer the questions below to find a game in our directory that most closely matches
+                what you want to play</h4>
+
+        </div>
+
+        <div class="card my-4">
+            <div class="card-header">
+                1 = I don't want this at all, 5 = I want this the whole time!
+            </div>
+            <div class="card-body">
+                <form>
+                    <label>This is a board game</label><br>
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                    </div> <br><br>
+                </form>
+                <form>
+                    <!-- Question 1 -->
+                    <label>I want to play a game that lets me explore</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="1">
+                        <label class="form-check-label mr-4" for="inlineRadio1">1</label>
+
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="2">
+                        <label class="form-check-label mr-4" for="inlineRadio2">2</label>
+
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="3">
+                        <label class="form-check-label mr-4" for="inlineRadio2">3</label>
+
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                            value="4">
+                        <label class="form-check-label mr-4" for="inlineRadio2">4</label>
+
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                            value="5">
+                        <label class="form-check-label mr-4" for="inlineRadio2">5</label>
+                    </div><br><br>
+                </form>
+
+
+                <!-- Question 2 -->
+                <form>
+                    <label>I want to play a game that lets me kill things</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio6">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio7">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio8">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio9">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio10"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio10">5</label>
+                    </div><br><br>
+                    <!-- Question 3 -->
+                    <label>I want to play a game that lets me accumulate wealth</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio11">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio12"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio12">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio13"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio13">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio14"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio14">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio15"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio15">5</label>
+                    </div><br><br>
+                    <!-- Question 4 -->
+                    <label>I want to play a game that involves cooperation between me and the other players</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio16"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio16">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio17"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio17">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio18"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio18">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio19"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio19">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio20"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio20">5</label>
+                    </div><br><br>
+                    <!-- Question 5 -->
+                    <label>I want to play a game that involves fierce competition</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio21"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio21">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio22"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio22">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio23"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio23">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio24"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio24">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio25"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio25">5</label>
+                    </div><br><br>
+                    <!-- Question 6 -->
+                    <label>I want to play a game that lets me be sneaky and scheme to win</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio26"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio26">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio27"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio27">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio28"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio28">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio29"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio29">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio30"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio30">5</label>
+                    </div><br><br>
+                    <!-- Question 7 -->
+                    <label>I want to play a game that takes a long time</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio31"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio31">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio32"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio32">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio33"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio33">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio34"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio34">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio35"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio35">5</label>
+                    </div><br><br>
+                    <!-- Question 8 -->
+                    <label>I want to play a game that involves lots of little pieces</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio36"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio36">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio37"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio37">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio38"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio38">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio39"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio39">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio40"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio40">5</label>
+                    </div><br><br>
+                    <!-- Question 9 -->
+                    <label>I want to play a game that lets me kill things</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio41"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio41">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio42"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio42">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio43"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio43">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio44"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio44">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio45"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio45">5</label>
+                    </div><br><br>
+                    <!-- Question 10 -->
+                    <label>I want to play a game that lets me kill things</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio46"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio46">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio47"
+                            value="2">
+                        <label class="form-check-label" for="inlineRadio47">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio48"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio48">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio49"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio49">4</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio50"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio50">5</label>
+                    </div><br><br>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
