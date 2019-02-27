@@ -33,6 +33,10 @@
             <hr>
             <h4 class="text-center">Answer the questions below to find a game in our directory that most closely matches
                 what you want to play</h4>
+            <div class="d-flex justify-content-center"><a class="btn btn-primary btn-lg m-2" href="/"
+                    role="button">Home</a>
+                <a class="btn btn-danger btn-lg m-2" href="/add" role="button"><i class="fas fa-clipboard-list"></i>
+                    Add a Game instead!</a></div>
 
         </div>
 
@@ -142,7 +146,8 @@
                         <option value="4">4</option>
                         <option value="5">5 (100% true)</option>
                     </select><br><br>
-                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#results-modal" id="submitBtn">Its dangerous to go alone..</button>
+                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#results-modal"
+                        id="submitBtn">Its dangerous to go alone..</button>
                 </form>
             </div>
         </div>
@@ -188,7 +193,7 @@
             $("#match-name").text(data.name);
             // $.post("/api/images/" + data.photo, function (data2) {
             //     console.log(data2)
-                $("#match-img").attr("src", data.photo);
+            $("#match-img").attr("src", data.photo);
             // });
         });
     });
