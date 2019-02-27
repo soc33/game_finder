@@ -22,7 +22,7 @@
     <!-- Linking jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Linking my javascript -->
-    <script src="../app/data/games.js"></script>
+    <!-- <script src="../data/games.js"></script> -->
 
 </head>
 
@@ -41,17 +41,6 @@
                 1 = I don't want this at all, 5 = I want this the whole time!
             </div>
             <div class="card-body">
-                <!-- <form>
-                    <label>This is a board game</label><br>
-                    <div class="form-group form-check ">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                    </div> <br><br>
-                </form> -->
                 <form>
                     <!-- Question 1 -->
                     <label>I want to play a game that lets me explore</label><br>
@@ -153,7 +142,7 @@
                         <option value="4">4</option>
                         <option value="5">5 (100% true)</option>
                     </select><br><br>
-                    <button class="btn btn-danger" id="submitBtn">Its dangerous to go alone..</button>
+                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#results-modal" id="submitBtn">Its dangerous to go alone..</button>
                 </form>
             </div>
         </div>
@@ -167,7 +156,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="match-name"></h2>
-                        <img class='image-fluid' style='width: 568px;' id="match-img" src="">
+                        <img class='image-fluid' style='width: 408px;' id="match-img" src="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -195,9 +184,12 @@
             ]
         };
         $.post("/api/gameList", userData, function (data) {
+            console.log(data);
             $("#match-name").text(data.name);
-            $("#match-img").attr("src", data.photo);
-            $("#results-modal").data("toggle");
+            // $.post("/api/images/" + data.photo, function (data2) {
+            //     console.log(data2)
+                $("#match-img").attr("src", data.photo);
+            // });
         });
     });
 </script>

@@ -1,5 +1,6 @@
 var games = require('../data/games.js');
 var newGames = [];
+var path = require("path");
 
 module.exports = function (app) {
 
@@ -17,11 +18,15 @@ module.exports = function (app) {
             var matches = 0;
             var closeMatches = 0;
             for (var i = 0; i < req.body.scores.length; i++) {
-                if (req.body.scores[i] === games[x].scores[i]) {
+                if (parseInt(req.body.scores[i]) === parseInt(games[x].scores[i])) {
                     matches++;
                 } else if (Math.abs(req.body.scores[i] - games[x].scores[i]) === 1) {
                     closeMatches++;
                 }
+                console.log(req.body.scores[i]);
+                console.log(games[x].scores[i]);
+                console.log("Game " + i + "got " + matches + " matches");
+                console.log("Game " + i + "got " + closeMatches + " close matches");
             }
 
             if (isNaN(current) == false) {
@@ -51,7 +56,6 @@ module.exports = function (app) {
                 }
             }
         }
-
         if (matchedGame) {
             res.json(matchedGame);
         } else if (secondOption) {
@@ -72,4 +76,8 @@ module.exports = function (app) {
 
         res.json(newgame);
     });
+
+    app.post("/api/images/:name", function (req, res) {
+        res.sendFile(path.join(__dirname, "./../data/images/" + req.params.name));
+    })
 };
