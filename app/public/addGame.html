@@ -19,11 +19,166 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Linking jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Linking my javascript -->
+    <script src="../app/data/games.js"></script>
 </head>
 
 <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">Find a game!</h1>
+            <hr>
+            <h4 class="text-center">Answer the questions below to find a game in our directory that most closely matches
+                what you want to play</h4>
 
+        </div>
+
+        <div class="card my-4">
+            <div class="card-header">
+                1 = This isn't very true for this game at all, 5 = This is a very true statement for this game!
+            </div>
+            <div class="card-body">
+                <form method="POST" role="form">
+                    <div class="form-group">
+                        <label for="name">Name of Game:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Link to a picture</label>
+                        <input type="text" class="form-control" id="photo">
+                    </div>
+                    <!-- Question 1 -->
+                    <label>This is a game that lets me explore</label><br>
+                    <select class="chosen-select" id="q1">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 2 -->
+                    <label>This is a game that lets me kill things</label><br>
+                    <select class="chosen-select" id="q2">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 3 -->
+                    <label>This is a game that lets me accumulate wealth</label><br>
+                    <select class="chosen-select" id="q3">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 4 -->
+                    <label>This is a game that involves cooperation between me and the other players</label><br>
+                    <select class="chosen-select" id="q4">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 5 -->
+                    <label>This is a game that involves fierce competition</label><br>
+                    <select class="chosen-select" id="q5">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 6 -->
+                    <label>This is a game that lets me be sneaky and scheme to win</label><br>
+                    <select class="chosen-select" id="q6">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 7 -->
+                    <label>This is a game that takes a long time</label><br>
+                    <select class="chosen-select" id="q7">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 8 -->
+                    <label>This is a game that involves lots of little pieces</label><br>
+                    <select class="chosen-select" id="q8">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 9 -->
+                    <label>This is a game that lets me play with a lot of friends</label><br>
+                    <select class="chosen-select" id="q9">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <!-- Question 10 -->
+                    <label>This is a complex game that has a lot of rules</label><br>
+                    <select class="chosen-select" id="q10">
+                        <option value=""></option>
+                        <option value="1">1 (100% false)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (100% true)</option>
+                    </select><br><br>
+                    <button class="btn btn-info" id="submitBtn">What do you bring to the tableTop?..</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#submitBtn").on("click", function (e) {
+            e.preventDefault();
+            var gameData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+            $.post("/api/gameadd", gameData).then(function (data) {
+                console.log("addGame.html" + data);
+            });
+        });
+    </script>
 </body>
 
 </html>
