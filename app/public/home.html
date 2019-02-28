@@ -19,9 +19,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <!-- linking my css -->
-    <link rel="stylesheet" href="../data/style/style.css">
-
+    <style>
+        body {
+            background-image: url("http://www.hdnicewallpapers.com/Walls/Big/Abstract/Red_and_Blue_Smoke_Creative_Design_Wallpaper.jpg");
+            background-repeat: none;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,12 +34,13 @@
             <h1 class="display-4 text-center">Game Finder</h1>
             <hr>
             <h2 class="text-center">For those that never know what to play next!</h4>
-            <h5 class="text-center">Answer the questions to find a game in our directory that most closely matches
-                what you want to play, or add a game to our directory.</h4>
-            <div class="d-flex justify-content-center"><a class="btn btn-primary btn-lg m-2" href="/find"
-                    role="button">Take the survey!</a>
-                <a class="btn btn-danger btn-lg m-2" href="/add" role="button"><i class="fas fa-clipboard-list"></i>
-                    Add a Game!</a></div>
+                <h5 class="text-center">Answer the questions to find a game in our directory that most closely matches
+                    what you want to play, or add a game to our directory.</h4>
+                    <div class="d-flex justify-content-center"><a class="btn btn-primary btn-lg m-2" href="/find"
+                            role="button">Take the survey!</a>
+                        <a class="btn btn-danger btn-lg m-2" href="/add" role="button"><i
+                                class="fas fa-clipboard-list"></i>
+                            Add a Game!</a></div>
         </div>
         <a href="/api/gameList">API Game List</a> |
         <a href="/api/gameadd">API Added Games List</a>
