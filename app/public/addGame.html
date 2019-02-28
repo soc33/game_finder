@@ -24,11 +24,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Linking my javascript -->
     <script src="../app/data/games.js"></script>
+    <!-- linking my css -->
+    <link rel="stylesheet" href="../data/style/style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron bg-secondary">
             <h1 class="display-4 text-center">Add a game!</h1>
             <hr>
             <h4 class="text-center">Answer the questions below to add a game in our directory that can be found by
@@ -158,6 +160,8 @@
                 </form>
             </div>
         </div>
+        <a href="/api/gameList">API Game List</a> |
+        <a href="/api/gameadd">API Added Games List</a>
     </div>
     <script>
         $("#submitBtn").on("click", function (e) {

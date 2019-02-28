@@ -23,10 +23,6 @@ module.exports = function (app) {
                 } else if (Math.abs(req.body.scores[i] - games[x].scores[i]) === 1) {
                     closeMatches++;
                 }
-                console.log(req.body.scores[i]);
-                console.log(games[x].scores[i]);
-                console.log("Game " + i + "got " + matches + " matches");
-                console.log("Game " + i + "got " + closeMatches + " close matches");
             }
 
             if (isNaN(current) == false) {
